@@ -191,8 +191,8 @@ h3 { margin-top: 0.3rem !important; }     /* Space above subheading */
 
 | Strategy | Return | Alpha |
 |---------|-------|-------|
-| **BAM Core** (top 20% per sector) - _lower risk_ | 14.8% annualized | 4.2% |
-| **BAM Unconstrained** (top 20 overall)-  _higher risk_ | 20.6% annualized | 10.1% |
+| **BAM Core** (top 20% per sector) - _lower risk_ | 14.8% annualized | <span class="positive">4.2%</span> |
+| **BAM Unconstrained** (top 20 overall) - _higher risk_ | 20.6% annualized | <span class="positive">10.1%</span> |
 
 <!-- ==================== SLIDE 10: Backtest Methodology ==================== -->
 ---
@@ -492,6 +492,7 @@ h3 { margin-top: 0.3rem !important; }     /* Space above subheading */
 
 <!-- ==================== SLIDE 24: Business Opportunity ==================== -->
 ---
+class: compact
 
 # Business Opportunity
 

@@ -170,16 +170,74 @@ Content on slide 2.
 
 ## Frontmatter Configuration
 
-The **first block** between `---` markers is special configuration (YAML format):
+Frontmatter is **settings for a slide** written in YAML format. It goes between `---` markers.
 
-```yaml
+### Understanding the Syntax
+
+> 💡 **Key concept**: The `---` is both a **slide separator** AND a **frontmatter container**.
+
+**Basic slide (no settings):**
+```markdown
 ---
-theme: default
-layout: intro
-background: /img/background.png
-title: My Presentation
-class: dense text-sm
+
+# My Slide
+
+Content here.
+```
+
+**Slide with settings:**
+```markdown
 ---
+class: compact
+layout: default
+---
+
+# My Slide
+
+Content here.
+```
+
+### The Rule
+
+Settings go **inside** the `---` block, not between two separate blocks:
+
+```markdown
+---
+class: compact      ← Settings go HERE, inside the block
+layout: default     ← More settings on new lines
+---
+
+# Slide Title       ← Content starts AFTER the closing ---
+```
+
+### ❌ Wrong vs ✅ Right
+
+**❌ WRONG** - Settings outside the block:
+```markdown
+---
+
+class: compact
+
+---
+
+# Title
+```
+
+**✅ RIGHT** - Settings inside the block:
+```markdown
+---
+class: compact
+---
+
+# Title
+```
+
+**✅ ALSO RIGHT** - Shorthand (closing `---` optional for simple cases):
+```markdown
+---
+class: compact
+
+# Title
 ```
 
 ### Common Options
@@ -188,23 +246,32 @@ class: dense text-sm
 |--------|--------------|----------------|
 | `layout` | Slide template | `intro`, `default`, `cover`, `center` |
 | `background` | Background image | `/img/background.png` |
-| `title` | Presentation title | `Quarterly Report` |
-| `class` | CSS classes for slide | `dense`, `text-sm`, `pull-sm` |
+| `class` | CSS classes for slide | `dense`, `compact`, `text-sm` |
 
-### Per-Slide Frontmatter
+### Per-Slide Example
 
-You can also configure individual slides:
+Apply settings to just one slide:
 
 ```markdown
+# Slide 1 (normal)
+
+Regular content here.
+
 ---
-layout: cover
-background: /img/special-bg.png
-class: text-sm dense
+class: compact
 ---
 
-# This Slide Has Its Own Settings
+# Slide 2 (compact lists)
 
-Custom layout and background just for this slide.
+- This slide has tighter bullet spacing
+- Because we added class: compact
+- Only affects THIS slide
+
+---
+
+# Slide 3 (back to normal)
+
+Regular spacing again.
 ```
 
 ---
