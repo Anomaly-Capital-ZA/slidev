@@ -493,6 +493,7 @@ h3 { margin-top: 0.3rem !important; }     /* Space above subheading */
 <!-- ==================== SLIDE 24: Business Opportunity ==================== -->
 ---
 class: compact
+---
 
 # Business Opportunity
 
