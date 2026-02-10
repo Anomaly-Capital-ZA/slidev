@@ -106,7 +106,7 @@ const base = import.meta.env.BASE_URL || '/'
 const llmModels = [
   { name: 'Gemini 3', logo: `${base}img/gemini.svg` },
   { name: 'GPT-5.1', logo: `${base}img/openai.svg` },
-  { name: 'Claude 4.5', logo: `${base}img/anthropic.svg` }
+  { name: 'ProxyLM', logo: `${base}img/qwen.svg` }
 ]
 
 // Computed property for animation class
