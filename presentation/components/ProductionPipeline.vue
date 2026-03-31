@@ -38,7 +38,7 @@ const props = defineProps({
       { id: 'data', title: 'Data', content: ['Company Filings', 'Other Structured'], footer: 'Processing' },
       { id: 'analytics', title: 'Data Analytics', content: ['LLM/Traditional', 'Scorecard'], footer: 'Scoring Model' },
       { id: 'results', title: 'Results', content: ['Exec/Board', 'Scoring'], footer: 'Company Score' },
-      { id: 'portfolio', title: 'Portfolio Construction', content: ['Company Score', 'Over/Under to Sector'], footer: 'S&P 500 Benchmark' }
+      { id: 'portfolio', title: 'Portfolio Construction', content: ['Company Score', 'Over/Under to Sector'], footer: 'Benchmark' }
     ]
   },
   
